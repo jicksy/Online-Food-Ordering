@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen"> 
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script> 
+    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+    <script src="js/FF-cash.js" type="text/javascript"></script>  
+	
+<script>
+
+function snd()
+{var flag=1;
+ var nam=document.forms["reg"]["cnam"].value;
+ var unam=document.forms["reg"]["uname"].value;
+ var pod1=document.forms["reg"]["password"].value;
+ var pod2=document.forms["reg"]["rep"].value;
+ var st=document.forms["reg"]["st"].value;
+ var ar=document.forms["reg"]["area2"].value;
+ 
+ var hno=document.forms["reg"]["house_no"].value;
+  var mail=document.forms["reg"]["mail"].value;
+  var mob1=document.forms["reg"]["mobile"].value;
+if(nam.length==0||nam.length<6){document.getElementById("appnam1").innerHTML="<div style='color:red'><b>Must be 6 or more char long</b></div>";flag=0;}
+ else 
+document.getElementById("appnam1").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(unam.length==0||unam.length<6){document.getElementById("village1").innerHTML="<div style='color:red'><b>Must be 6 or more char long</b></div>";flag=0;}
+ else 
+document.getElementById("village1").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(pod1.length==0){document.getElementById("password").innerHTML="<div style='color:red'><b>Must be populated</b></div>";flag=0;}
+ else 
+document.getElementById("password").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(pod2.length==0){document.getElementById("password1").innerHTML="<div style='color:red'><b>Must be populated</b></div>";flag=0;}
+ else 
+document.getElementById("password1").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(st.length==0){document.getElementById("street1").innerHTML="<div style='color:red'><b>Must be populated</b></div>";flag=0;}
+ else 
+document.getElementById("street1").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(ar.length==0){document.getElementById("area1").innerHTML="<div style='color:red'><b>Must be populated</b></div>";flag=0;}
+ else 
+document.getElementById("area1").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(mail.length==0||mail.indexOf('@',0)==-1||mail.indexOf('.',0)==-1){document.getElementById("mail1").innerHTML="<div style='color:red'><b>Enter correctly</b></div>";flag=0;}
+ else 
+document.getElementById("mail1").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(mob1.length==0){document.getElementById("mno").innerHTML="<div style='color:red'><b>Must be populated</b></div>";flag=0;}
+ else 
+document.getElementById("mno").innerHTML="<div style='color:green'><b>OK</b></div>"; 
+
+if(hno.length==0){document.getElementById("hno1").innerHTML="<div style='color:red'><b>Enter numbers</b></div>";flag=0;}
+ else 
+document.getElementById("hno1").innerHTML="<div style='color:green'><b>OK</b></div>";
+
+if(flag==1) 
+document.getElementById("contact-form").submit();
+
+ 
+ 
+}
+</script>
+</head>
+<body id="page6">
+	<!--==============================header=================================-->
+    <header>
+    	<div class="row-top">
+        	<div class="main">
+            	<div class="wrapper">
+                	<h1><a href="index.html">Fudla</a></h1>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.php">Menu</a></li>
+                            
+                            <li><a href="comp.php">Reviews</a></li>
+                            
+                            <li><a class="active" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row-bot">
+        	<div class="row-bot-bg">
+            	<div class="main">
+                	<h2>Online Food  <span>Ordering</span></h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+	<!--==============================content================================-->
+    <section id="content"><div class="ic"></div>
+        <div class="main">
+            <div class="wrapper">
+              <article class="col-2">
+           	    <h3 class="p1">Registration form</h3>
+                   <form id="contact-form" name="reg" method="post" enctype="multipart/form-data" action="registration.php">                    
+                        
+			<table border="0">
+			  	<tr>
+				
+                    <td>Name</td><td><input  id="appnam" name="cnam" type="text" class="input"></td>
+		    <td><div id="appnam1"><br/></div><br/><br/></td>
+                 
+				</tr>
+ 
+				<tr>
+				
+                    <td>Username</td><td><input id="uname" name="uname" type="text" class="input" ></td>
+		            <td><div id="village1"><br/></div><br/><br/></td>
+                  
+				</tr>
+	 
+				 <tr>
+                 
+                    <td>Email-id</td>
+                    <td><input id="mail2" name="mail" type="text" class="input" ></td>
+					<td><div id="mail1"><br/></div><br/><br/></td>
+                  
+				</tr>
+                <tr>
+                 
+                    <td>Mobile Number</td>
+                    <td><input id="mob" name="mobile" type="text" class="input" ></td>
+					<td><div id="mno"><br/></div><br/><br/></td>
+                  
+				</tr>
+                <tr>
+                 
+                    <td>Password</td><td><input id="pass" name="password" type="password" class="input" ></td>
+					<td><div id="password"><br/></div><br/><br/></td>
+                  
+				</tr>
+ 
+                <tr>
+                 
+                    <td>Re-type Password</td>
+					<td><input id="repass" name="rep" type="password" class="input" ></td>
+					<td><div id="password1"><br/></div><br/><br/></td>
+           	    </tr>
+			 
+                <tr>
+                 
+                    <td>House Number</td>
+					<td><input id="h_no" name="house_no" type="text" class="input" ></td>
+					<td><div id="hno1"><br/></div><br/><br/></td>
+                  
+				</tr>
+
+               <tr>
+                 
+                    <td>Street</td>
+                    <td><input id="st" name="street" type="text" class="input" ></td>
+					<td><div id="street1"><br/></div><br/><br/></td> 
+                  
+				</tr>
+                <tr>
+                 
+                    <td>Area</td>
+                    <td><input id="area2" name="area" type="text" class="input" ></td>
+					<td><div id="area1"><br/></div><br/><br/></td>
+                  
+				</tr>
+
+				
+                <tr>
+                <td><input type="button" value="Send" class="button-2" onClick='snd()'/></td>
+                 <td><input type="reset" value="Clear" class="button-2" onClick='history.go()'/></td> 
+				</tr>
+                
+			</table>			
+                    </form>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+	<!--==============================footer=================================-->
+    <footer>
+        <div class="main">
+        	<div class="aligncenter">
+            	
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

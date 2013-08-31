@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Item</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen"> 
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script> 
+    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+    <script src="js/FF-cash.js" type="text/javascript"></script>  
+	
+</head>
+<body id="page6">
+	<!--==============================header=================================-->
+    <header>
+    	<div class="row-top">
+        	<div class="main">
+            	<div class="wrapper">
+                	<h1><a href="index.html">Fudla</a></h1>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="menu.php">Menu</a></li>
+                           
+                            <li><a href="comp.php">Reviews</a></li>
+                            
+                            <li><a class="active" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row-bot">
+        	<div class="row-bot-bg">
+            	<div class="main">
+                	<h2>Online Food  <span>Ordering</span></h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+	<!--==============================content================================-->
+    <section id="content"><div class="ic"></div>
+        <div class="main">
+            <div class="wrapper">
+            	
+                <article class="col-2">
+                	<h3 class="p1">Add To Menu</h3>
+                    <form id="contact-form" method="post" enctype="multipart/form-data" action="menu_add.php">                    
+                        <table border="0">
+			  	
+ 
+				<tr>
+				
+                    <td>Item name</td><td><input id="uname" name="item_name" type="text"  ></td>
+		    <td><div id="village1"><br/></div></br></br></td>
+                  
+				</tr>
+	 
+				 <tr>
+                 
+                    <td>Category</td>
+		<td><select name="sel">
+  		<option value="default">----Select----</option>
+ 		<option value="0">Italian</option>
+  		<option value="1">Indian</option>
+  		<option value="2">Chineese</option>
+  		<option value="3">French</option>
+		</select></td>
+                   
+					<td><div id="mail1"><br/></div><br/><br/></td>
+                  
+				</tr>
+                <tr>
+                 
+                    <td>Price</td>
+                     <td><input id="mail2" name="price" type="text" class="input" ></td>	
+					<td><div id="select"><br/></div><br/><br/></td>
+                  
+				</tr>
+ 
+				
+                 <td><input type="submit" value="Send" class="button-2" ></td> 
+                 <td><input type="reset" value="Clear" class="button-2" onClick='history.go()'/></td> 
+				</tr>
+			</table>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+	<!--==============================footer=================================-->
+    <footer>
+        <div class="main">
+        	<div class="aligncenter">
+            	
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
